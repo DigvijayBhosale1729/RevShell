@@ -1,6 +1,6 @@
-## RevShell
+# RevShell
 
-# A tool to grant access to a target machine
+## A tool to grant access to a target machine
 
 Edit the client.py file 
 Fill in the host in
