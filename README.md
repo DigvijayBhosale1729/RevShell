@@ -1,7 +1,7 @@
 # RevShell
+A tool to grant access to a target machine via a reverse shell
 
-## A tool to grant access to a target machine
-
+## Instructions
 Edit the client.py file 
 Fill in the host in
 
