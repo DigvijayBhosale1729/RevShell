@@ -1,13 +1,8 @@
 # Written by FoxSinOfGreed1729
 # Many Thanks to TheNewBoston
 import socket
-import threading
-from queue import Queue
-import concurrent.futures
 
-no_of_threads = 2
-job_no = [1, 2]
-queue = Queue()
+
 all_conn = []
 # this stored the connection object
 all_addr = []
@@ -137,39 +132,12 @@ def send_command(conn):
             print("Something went wrong while remote command execution")
 
 
-def create_threads():
-    for _ in range(no_of_threads):
-        t = threading.Thread(target=work)
-        t.daemon = True
-        t.start()
-
-
-def create_queue():
-    for x in job_no:
-        queue.put(x)
-    queue.join()
-
-
-def work():
-    while True:
-        x = queue.get()
-        if x == 1:
-            socket_create()
-            socket_bind()
-            socket_accept()
-        if x == 2:
-            prompt()
-        queue.task_done()
-
-
 def main():
-    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
-        executor.map()
+    socket_create()
+    socket_bind()
+    socket_accept()
+    prompt()
 
-
-socket_create()
-socket_bind()
-socket_accept()
-prompt()
+main()
 
 # main()
