@@ -86,6 +86,7 @@ def prompt():
 def main():
     t1 = threading.Thread(target=part1)
     t2 = threading.Thread(target=part2)
+    t1.daemon = True
     t1.start()
     t2.start()
 
@@ -144,6 +145,7 @@ def send_command(conn):
             print(working_dir, end='')
             cmd = input(">>>")
             if cmd == 'quit' or cmd == 'exit':
+                conn.send(str.encode("Connection Paused"))
                 return None
                 # A thing to remember is that stuff that's taken as input isn't bytes
                 # It's in byte type so we'll have to convert it to string manually
