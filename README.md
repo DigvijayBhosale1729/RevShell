@@ -16,7 +16,7 @@ Run the client script on the target machine
 
     python3 client.py
     
-##The interactive shell
+## The interactive shell
 The interactive shell starts with a #
 Commands for the interactive shell
 
@@ -31,6 +31,8 @@ Commands for the reverse shell
     os info - prints info about the OS
     quit - quits the reverse shell, but does not drop the connection.
     
+## Using the scripts
+
 To connect back to a previous connection, use the list command in interactive shell, select the connection and connect
 
 ![image](https://user-images.githubusercontent.com/70275323/114598481-918bcc00-9caf-11eb-8621-99fc5f26623e.png)
@@ -63,11 +65,11 @@ Some commands like
 Will cause the script to execute the command but freeze the scipt. 
 
 Plans for the next update include - 
+
 Allowing creation of files
+
 Fixing the broken change directory function
 
+Support for windows, .exe file, and autorun disk payload
 
-
-
-
-
+Coming soon
