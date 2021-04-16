@@ -2,7 +2,8 @@
 A tool to grant access to a target machine via a reverse shell
 
 ## Instructions
-Edit the client.py file 
+Editing the client.py file 
+
 Fill in the host in
 
     host = ''
@@ -15,9 +16,18 @@ Run the server script on the attacker machine using
 Run the client script on the target machine
 
     python3 client.py
+
+## Creating Windows executable (Only on linux)
+
+To create aa windows executable, run the setup.sh in terminal
+
+    bash setup.sh
     
+The script will install cx_Freeze and build the executable. At the end it will show the path to the executable. (It's usually somewhere inside the build folder)
+
 ## The interactive shell
 The interactive shell starts with a #
+
 Commands for the interactive shell
 
     list - lists out the connections received
@@ -26,6 +36,7 @@ Commands for the interactive shell
     quit - quits out of the program and drops all connections
 
 The reverse shell after connection becomes >>> with the current working directory preceding it
+
 Commands for the reverse shell
 
     os info - prints info about the OS
