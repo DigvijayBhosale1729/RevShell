@@ -1,4 +1,4 @@
-# Written by FoxSinOfGreed1729
+# Written by  FoxSinOfGreed1729
 # Many Thanks to TheNewBoston
 import socket
 import threading
