@@ -43,5 +43,4 @@ def command():
 
 
 command()
-
 s.close()
